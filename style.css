@@ -1573,6 +1573,7 @@ input, select {
     padding-left: 5.6%;
   }
 }
+
 .p-hero__title--menu {
   line-height: 2.637rem;
   font: 700 2.25rem "Roboto", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
@@ -2226,6 +2227,75 @@ input, select {
 @media screen and (min-width: 1200px) {
   .u-gap__card {
     gap: 3.75rem;
+  }
+}
+/* 404ページ phpベタ打ち*/
+.p-404__title--area{
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  font-size: 9.6vw;
+  color: #3C2A10;
+      @media screen and (min-width: 768px){
+          font-size: 4.32vw;
+          width: 100%;
+      }
+      @media screen and (min-width: 1200px){
+          font-size: 2.08vw;
+      }
+}
+.p-404__text--area{
+    width: 80%;
+    margin:0 auto 20rem;
+    text-align: left;
+    @media screen and (min-width: 768px){
+      text-align: center;
+    }
+}
+.p-404__linkBottom{
+    cursor: pointer;
+}
+.p-404__linkBottom:link{
+    color: #3C2A10;
+    text-decoration: underline;
+    text-decoration-color: #3C2A10;
+}
+.p-404__linkBottom:visited{
+    color: #3C2A10;
+    text-decoration: none;
+}
+.p-404__linkBottom:hover{
+    color: #3C2A10;
+    text-decoration: underline;
+    text-decoration-color: #3C2A10;
+}
+.p-404__linkBottom:focus{
+    color: #3C2A10;
+    text-decoration: none;
+}
+.p-404__linkBottom:active{
+    color: #3C2A10;
+    text-decoration: none;
+} 
+.u-404__br--tb{
+  display: none;
+  @media screen and (min-width: 768px){
+      display: block;
+  }
+  @media screen and (min-width: 1200px){
+      display: none;
+  }
+}
+.u-404__br--tbPc{
+  display: none;
+  @media screen and (min-width: 768px){
+      display: block;
+  }
+}
+.u-404__text--sp{
+  display: inline-block;
+  @media screen and (min-width: 768px){
+      display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
