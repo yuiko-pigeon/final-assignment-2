@@ -8,17 +8,12 @@
         <meta name="description" content="<?php bloginfo('description'); ?>">
         <?php wp_head(); ?>
     </head>
-    <body>
+    <body <?php body_class(); ?>>
         <div class="l-wrapper" id="js-wrapper">
             <header class="l-header">
                 <button type="button" class="l-header__title__small" id="js-hamburger">Menu</button>
                 <div class="l-header__article">
-                    <h1 class="l-header__title">Hamburger</h1>
-                    <form class="p-searchform" action="./arcive-search.html" method="post" name="search-form">
-                        <div class="p-searchform__box">
-                            <input  type="search" name="q" value="" placeholder="" class="p-searchform__input"  id="js-search">
-                        </div>
-                            <input class="p-searchform__button" type="submit" value="検索">
-                    </form>
+                    <h1 class="l-header__title"><?php bloginfo( 'name' ); ?></h1>
+<?php get_search_form(); ?>
                 </div>
             </header>

@@ -61,6 +61,6 @@ const urlParams = new URLSearchParams(window.location.search);
   const searchWord = urlParams.get('q'); 
   // 検索ワードが存在すれば、検索窓にセットする
   if (searchWord) {
-    document.getElementById('js-search').value = searchWord;
+    document.getElementById('id名').value = searchWord;
   }
 */

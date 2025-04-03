@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/*Theme Name: Hamburger*/
 /*light*/
 /*Medium*/
 /*Bold*/
@@ -339,8 +338,7 @@ input, select {
   color: #707070;
 }
 .l-sidebar__menu__list {
-  width: 11.25rem ;
-  box-sizing: content-box; /*WP上のスタイリングのため追加。これがないと、改行される。*/
+  width: 11.25rem;
   display: block;
   font: 400 1.25rem "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   color: #707070;
@@ -1092,7 +1090,7 @@ input, select {
   position: relative;
   align-items: end;
   justify-content: flex-end;
-  background-image: url(image/three-burgers-on-brown-wooden-tray-between-white-ceramic-takeout-hero2.jpg);
+  background-image: url(../../picture/three-burgers-on-brown-wooden-tray-between-white-ceramic-takeout-hero2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 89.3%;
@@ -1115,7 +1113,7 @@ input, select {
   position: relative;
   align-items: end;
   justify-content: flex-end;
-  background-image: url(image/humberger-potato-eatin.jpg);
+  background-image: url(../../picture/humberger-potato-eatin.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   aspect-ratio: 336/642;
@@ -1425,7 +1423,7 @@ input, select {
   content: "";
   width: 1.5rem;
   height: 1.5rem;
-  background: url(image/mushimegane.png) no-repeat center center/auto 100%;
+  background: url(../../picture/mushimegane.png) no-repeat center center/auto 100%;
   display: inline-block;
   position: absolute;
   top: 0.6875rem;
@@ -1482,7 +1480,7 @@ input, select {
 .p-hero {
   display: flex;
   align-items: center;
-  background-image: url(image/hero.jpg);
+  background-image: url(../../picture/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1573,7 +1571,6 @@ input, select {
     padding-left: 5.6%;
   }
 }
-
 .p-hero__title--menu {
   line-height: 2.637rem;
   font: 700 2.25rem "Roboto", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
@@ -1621,7 +1618,7 @@ input, select {
   }
 }
 .p-map__image {
-  background-image: url(image/map-image.jpg);
+  background-image: url(../../picture/map-image.jpg);
   background-size: cover;
   height: auto;
 }
@@ -1713,7 +1710,7 @@ input, select {
 }
 .p-footer__image {
   display: block;
-  background-image: url(image/texture-layer.png);
+  background-image: url(../../picture/texture-layer.png);
   background-repeat: repeat-x;
   background-size: cover;
   height: 150px;
@@ -2022,6 +2019,319 @@ input, select {
   text-decoration: none;
 }
 
+.single .wp-block-gallery .wp-block-image .wp-image-48 {
+  display: flex;
+  width: 89.3%;
+  aspect-ratio: 335/124;
+  margin: 0 auto;
+  margin-bottom: 1.875rem;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-gallery .wp-block-image .wp-image-48 {
+    margin-bottom: 3.75rem;
+  }
+}
+.single .wp-block-columns {
+  margin: 0 auto 3.75rem 5.34%;
+  width: 89.9%;
+  line-height: 1.485rem;
+}
+.single .wp-block-quote {
+  margin: 0 auto;
+  margin-bottom: 1.875rem;
+  width: 89.3%;
+  line-height: 1.485rem;
+  background-color: #F5F5F5;
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-quote {
+    margin-bottom: 3.75rem;
+    width: 85.61%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-quote {
+    width: 87.12%;
+  }
+}
+.single .wp-block-quote > p {
+  width: 89.25%;
+  padding-top: 1.875rem;
+  margin-bottom: 1.875rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-quote > p {
+    margin-bottom: 3.8125rem;
+    padding-top: 3.125rem;
+  }
+}
+.single .wp-block-quote > cite {
+  width: 89.3%;
+  padding-bottom: 1.875rem;
+  font-family: "Mplus 1m", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  line-height: 1.485rem;
+  margin: 0 auto;
+  font-style: unset;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-quote > cite {
+    padding-bottom: 3.5625rem;
+    width: 85.61%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-quote > cite {
+    padding-bottom: 2.9375rem;
+    width: 87.12%;
+  }
+}
+.single .first-figure {
+  width: 89.3%;
+  margin: 0 auto;
+  margin-bottom: 1.875rem;
+}
+@media screen and (min-width: 768px) {
+  .single .first-figure {
+    margin-bottom: 3.75rem;
+  }
+}
+.single .wp-block-group .wp-block-image .aligncenter {
+  display: block;
+  width: 16.7rem;
+  aspect-ratio: 267/166;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-group .wp-block-image .aligncenter {
+    margin: 0 auto;
+    display: block;
+    width: 36.3rem;
+    aspect-ratio: 581/358;
+  }
+}
+.single .wp-block-gallery.wp-block-gallery-2.is-layout-flex {
+  gap: 1.25rem !important;
+  --wp--style--unstable-gallery-gap:1.25rem !important;
+  margin: 0 auto !important;
+  width: 89.3%;
+  /*figure img{
+      margin-bottom: 1.875rem;
+          @include g.tab{
+              margin-bottom: 0rem;
+          }
+
+  }*/
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-gallery.wp-block-gallery-2.is-layout-flex {
+    display: grid;
+    width: 86.32%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    row-gap: 1.25rem;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-gallery.wp-block-gallery-2.is-layout-flex {
+    width: 88.16%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+.single .wp-block-gallery.has-nested-images figure.wp-block-image:not(#individual-image) {
+  width: auto;
+}
+.single .wp-block-table {
+  margin: 3.75rem auto;
+  width: 89.3%;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-table {
+    width: 85.49%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-table {
+    width: 87.12%;
+  }
+}
+.single .wp-block-table tr td {
+  border: 0.0625rem solid #707070;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.single .wp-block-table tr td:nth-child(1) {
+  width: 31.7%;
+  padding-left: 1.464rem;
+  vertical-align: middle;
+  width: 41.79%;
+  height: 4.8125rem;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-table tr td:nth-child(1) {
+    width: 30.02%;
+    padding-left: 1.875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-table tr td:nth-child(1) {
+    width: 31.7%;
+  }
+}
+.single .wp-block-table tr td:nth-child(2) {
+  vertical-align: middle;
+  padding-left: 1.875rem;
+}
+.single .wp-block-buttons {
+  margin-left: 5.3%;
+}
+@media screen and (min-width: 768px) {
+  .single .wp-block-buttons {
+    margin-left: 7.19%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .wp-block-buttons {
+    margin-left: 6.44%;
+  }
+}
+.single .wp-block-button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 26.81rem;
+  max-height: 6.5rem;
+  width: 89.3%;
+  aspect-ratio: 335/81;
+  border-radius: 1.25rem;
+  border: 0.0625rem solid #707070;
+  background: linear-gradient(#F2EDE9, #DED8D3);
+}
+.single .wp-block-button__link {
+  display: flex;
+  color: #3C2A10;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  background-color: transparent;
+  border-radius: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  padding: auto;
+}
+.single .is-style-tb-large {
+  margin-bottom: 1.875rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-tb-large {
+    margin-bottom: 15.06rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .is-style-tb-large {
+    margin-bottom: 3.75rem;
+  }
+}
+.single .is-style-margin-listtop {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-margin-listtop {
+    margin-top: 2.875rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .is-style-margin-listtop {
+    margin-top: 3.3125rem;
+  }
+}
+.single .is-style-margin-listbottom {
+  margin-bottom: 1.625rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-margin-listbottom {
+    margin-bottom: 3.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .is-style-margin-listbottom {
+    margin-bottom: 3.5rem;
+  }
+}
+.single .is-style-list-1 {
+  line-height: 1.485rem;
+  margin-left: 11.47%;
+  padding-top: 1.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-list-1 {
+    margin-left: 18%;
+  }
+}
+.single .is-style-list-1 > li ul {
+  list-style: auto;
+}
+.single .is-style-list-1 > li > ul {
+  margin-left: 4.8%;
+  padding-top: 1.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-list-1 > li > ul {
+    margin-left: 2.14%;
+  }
+}
+.single .is-style-list-2 {
+  line-height: 1.485rem;
+  margin-left: calc(11.47% - 1.25rem);
+  padding-top: 1.0625rem;
+  list-style: none;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-list-2 {
+    margin-left: calc(18% - 1.25rem);
+  }
+}
+.single .is-style-list-2 > li ul {
+  list-style: none;
+}
+.single .is-style-list-2 > li > ul {
+  margin-left: 4.8%;
+  padding-top: 1.0625rem;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-list-2 > li > ul {
+    margin-left: 2.14%;
+  }
+}
+.single .is-style-group-gray {
+  background-color: #F5F5F5;
+  display: block;
+  margin: 0 auto;
+  width: 89.3%;
+}
+@media screen and (min-width: 768px) {
+  .single .is-style-group-gray {
+    width: 85.49%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .single .is-style-group-gray {
+    width: 87.12%;
+  }
+}
+.single .is-style-tag-1 {
+  font-family: "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  width: 67.76%;
+  line-height: 1.485rem;
+  color: #3C2A10;
+  padding: 3.125rem 0 3.125rem 3.125rem;
+}
+
 .u-margin__center {
   margin: 0 auto;
 }
@@ -2227,75 +2537,6 @@ input, select {
 @media screen and (min-width: 1200px) {
   .u-gap__card {
     gap: 3.75rem;
-  }
-}
-/* 404ページ phpベタ打ち*/
-.p-404__title--area{
-  display: flex;
-  flex-direction:column ;
-  align-items: center;
-  font-size: 9.6vw;
-  color: #3C2A10;
-      @media screen and (min-width: 768px){
-          font-size: 4.32vw;
-          width: 100%;
-      }
-      @media screen and (min-width: 1200px){
-          font-size: 2.08vw;
-      }
-}
-.p-404__text--area{
-    width: 80%;
-    margin:0 auto 20rem;
-    text-align: left;
-    @media screen and (min-width: 768px){
-      text-align: center;
-    }
-}
-.p-404__linkBottom{
-    cursor: pointer;
-}
-.p-404__linkBottom:link{
-    color: #3C2A10;
-    text-decoration: underline;
-    text-decoration-color: #3C2A10;
-}
-.p-404__linkBottom:visited{
-    color: #3C2A10;
-    text-decoration: none;
-}
-.p-404__linkBottom:hover{
-    color: #3C2A10;
-    text-decoration: underline;
-    text-decoration-color: #3C2A10;
-}
-.p-404__linkBottom:focus{
-    color: #3C2A10;
-    text-decoration: none;
-}
-.p-404__linkBottom:active{
-    color: #3C2A10;
-    text-decoration: none;
-} 
-.u-404__br--tb{
-  display: none;
-  @media screen and (min-width: 768px){
-      display: block;
-  }
-  @media screen and (min-width: 1200px){
-      display: none;
-  }
-}
-.u-404__br--tbPc{
-  display: none;
-  @media screen and (min-width: 768px){
-      display: block;
-  }
-}
-.u-404__text--sp{
-  display: inline-block;
-  @media screen and (min-width: 768px){
-      display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
