@@ -66,16 +66,30 @@ function post_has_archive($args, $post_type)
 }
 add_filter('register_post_type_args', 'post_has_archive', 10, 2);
 
-//エディタスタイル　cssファイルの読み込み
-function my_theme_add_editor_styles() {
-    add_theme_support('editor-styles');
-    add_editor_style('editor-style.css');
+
+// カスタム投稿タイプにリビジョン追加
+function add_posttype_revisions() {
+    add_post_type_support( 'column', 'revisions' );
 }
-add_action('after_setup_theme', 'my_theme_add_editor_styles');
+add_action('init', 'add_posttype_revisions');
 
 //独自スタイルの追加
 function custom_block_styles() {
     // 独自のブロックスタイルを登録する
+    register_block_style(
+        'core/media-text', // ブロック名
+        array(
+            'name'         => 'text-right', // スタイル名
+            'label'        => 'テキストが右', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/media-text', // ブロック名
+        array(
+            'name'         => 'text-left', // スタイル名
+            'label'        => 'テキストが左', // スタイルの表示名
+        )
+    );
     register_block_style(
         'core/list', // ブロック名
         array(
@@ -98,10 +112,17 @@ function custom_block_styles() {
         )
     );
     register_block_style(
+        'core/group', // ブロック名
+        array(
+            'name'         => 'link', // スタイル名
+            'label'        => 'リンク下線色なし', // スタイルの表示名
+        )
+    );
+    register_block_style(
         'core/preformatted', // ブロック名
         array(
             'name'         => 'tag-1', // スタイル名
-            'label'        => '1', // スタイルの表示名
+            'label'        => 'tag-1', // スタイルの表示名
         )
     );
     register_block_style(
@@ -123,6 +144,27 @@ function custom_block_styles() {
         array(
             'name'         => 'margin-listbottom', // スタイル名
             'label'        => 'リスト下', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/spacer', // ブロック名
+        array(
+            'name'         => 'card-gap', // スタイル名
+            'label'        => 'カラム間のスペース', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/image', // ブロック名
+        array(
+            'name'         => 'image-upper', // スタイル名
+            'label'        => '投稿上部の画像サイズ', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/gallery', // ブロック名
+        array(
+            'name'         => 'gallery-9', // スタイル名
+            'label'        => '9枚のギャラリー', // スタイルの表示名
         )
     );
 }
@@ -162,8 +204,12 @@ return $content;
 }
 add_filter('the_content', 'add_paragraph_class');*/
 
-
-
+//エディタスタイル　cssファイルの読み込み
+/*function my_theme_add_editor_styles() {
+    add_theme_support('editor-styles');
+    add_editor_style('editor-style.css');
+}
+add_action('after_setup_theme', 'my_theme_add_editor_styles');*/
 
 //サイドバー　管理画面上にウィジェットの設定メニューを表示
 /*function register_custom_menus(){
