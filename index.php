@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<?php get_sidebar(); ?>
 <main class="l-main l-main__font">
                 <div class="p-hero">
                     <p class="c-title__hero">ダミーサイト</p>
@@ -53,4 +52,5 @@
                     </div>  
                 </article> 
             </main>
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
