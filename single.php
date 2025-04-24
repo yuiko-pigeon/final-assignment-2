@@ -9,8 +9,9 @@
             <img src="<?php the_field('hero'); ?>" class="c-image__hero--sp">
             <img src="<?php the_field('hero_tb'); ?>" class="c-image__hero--tb">
             <img src="<?php the_field('hero_pc'); ?>" class="c-image__hero--pc">
+            <!--h1タグの存在は残しつつ画面上で非表示にするif-->
             <?php if (!is_singular()) : ?>
-            <div class="c-title__hero--single"><?php the_title(); ?></h1>
+            <h1 class="c-title__hero--single"><?php the_title(); ?></h1>
             <?php endif; ?>
         </div>
         <?php the_content(); ?>           

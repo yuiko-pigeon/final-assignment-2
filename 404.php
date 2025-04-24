@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 <main class="l-main l-main__font">
-                        <p class="p-page404__title--area u-margin__bottom--textBlock u-margin__middle--top">
-                            <span class="p-hero__title--menu">not found</span>
+                        <div class="p-page404__title--area u-margin__bottom--textBlock u-margin__middle--top">
+                            <h1 class="p-hero__title--menu">not found</h1>
                             <span class="c-article">ページが見つかりません</span>
-                        </p>
+                        </div>
                 <article class="p-page404__text--area u-lineheight c-article p-page404__margin--bottom">
                     お探しのページは、削除されたか、名前が変更された可能性があります。<br class="p-page404__br--tb">
                     直接アドレスを入力された場合は<br class="p-page404__br--tb">アドレスが正しく入力されているか<span class="p-page404__text--sp">、</span>もう一度ご確認ください。<br>

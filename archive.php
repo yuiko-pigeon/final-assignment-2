@@ -4,7 +4,7 @@
                 <div class="p-hero__imageArea">
                     <div class="p-hero__blackScreen">
                         <p class="p-hero__title--area">
-                            <span class="p-hero__title--menu">Menu:</span>
+                            <h1 class="p-hero__title--menu">Menu:</h1>
                             <span class="p-hero__title--menucontent"><?php the_archive_title(); ?></span>
                         </p>
                     </div>
@@ -47,7 +47,7 @@
                                 <h4 class="p-card__title--arcive--small">
                                     <!-- 小見出し（今回はh2)をコンテンツより取得-->
                                     <?php
-                                        $content = get_the_content(); // 投稿本文を取得（ループ内で）
+                                         $content = get_the_content(); // 投稿本文を取得（ループ内で）
                                         preg_match_all('/<h2[^>]*>(.*?)<\/h2>/u', $content, $h2_list);
                                         foreach ($h2_list[0] as $h2) {
                                         echo strip_tags($h2); //でテキストだけ出力も可

@@ -1,6 +1,5 @@
 <?php get_header(); ?>
 <main class="l-main l-main__font">
-                
         <?php the_content(); ?>
                 <article class="p-map">
                     <div class="p-map__image">     

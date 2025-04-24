@@ -27,11 +27,12 @@
         <?php if( is_user_logged_in() ) : ?>
             <style type="text/css">
                 html {
-                    margin: 0 0 32px!important;
+                    margin: 0 0 2rem!important;
                 }
                 #wpadminbar {
-                    top: unset!important;
+                    top: unset !important;
                     bottom: 0;
+                    position: fixed !important; 
                 }
             </style>
         <?php endif; ?>

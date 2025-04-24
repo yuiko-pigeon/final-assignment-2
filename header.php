@@ -13,7 +13,12 @@
             <header class="l-header">
                 <button type="button" class="l-header__title__small" id="js-hamburger">Menu</button>
                 <div class="l-header__article">
+                <!--TOPが固定・投稿どちらかでタイトルh1それ以外のページはpタグ-->
+                <?php if ( is_front_page() || is_home() ) : ?>
                     <h1 class="l-header__title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+                    <?php else : ?>
+                    <p class="l-header__title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a></p>
+                    <?php endif; ?>
         <?php get_search_form(); ?>
                 </div>
             </header>
