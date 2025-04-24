@@ -2,7 +2,7 @@
 /*
 Template Name: 閲覧履歴
 */
-get_header(); ?>
+    get_header(); ?>
 
 <?php 
     if( have_posts()):
@@ -18,21 +18,27 @@ get_header(); ?>
         <!--閲覧履歴取得-->
         <?php
             $viewed_posts = get_view_history_posts(10);
-
+           
             if (!empty($viewed_posts)) {
                 $args = [
                     'post__in' => $viewed_posts,
                     'orderby' => 'post__in',
                     'posts_per_page' => 10
-                ];
+                ]; ?>
+
+        <div class="u-margin__center u-width">
+
+                <?php
+                // WP_Queryを使用して、閲覧履歴の投稿を取得
 
                 $history_query = new WP_Query($args);
 
                 if ($history_query->have_posts()) :
-                    echo '<h3>閲覧履歴</h3>';
-                    echo '<ul>';
+                    echo '<h3 class="title">閲覧履歴</h3>';
+
+                    echo '<ul class="p-article">';
                     while ($history_query->have_posts()) : $history_query->the_post(); ?>
-                        <li>
+                        <li class="p-card__textarea">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </li>
                     <?php endwhile;
@@ -42,6 +48,9 @@ get_header(); ?>
             } else {
                 echo '<p>閲覧履歴はありません。</p>';
             }; ?>
+        </div>
+
+
     </main>
     <?php endwhile;
         else:?>

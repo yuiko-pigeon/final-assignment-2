@@ -2,6 +2,7 @@
 //テーマサポート
 add_theme_support( 'menus' );
 add_theme_support( 'title-tag' );
+add_theme_support('post-thumbnails');
 
 //タイトル出力
 function hamburger_title( $title ) {
@@ -23,7 +24,6 @@ function my_enqueue_style(){
 add_action('wp_enqueue_scripts','my_enqueue_style');
 
 //ヒストリーページ　閲覧履歴の保存
-
 function save_view_history() {
     if (is_single()) {
         $post_id = get_the_ID();
@@ -31,13 +31,10 @@ function save_view_history() {
 
         // 過去の履歴から現在の投稿IDを削除（重複防止）
         $history = array_diff($history, [$post_id]);
-
         // 配列の先頭に追加
         array_unshift($history, $post_id);
-
         // 保存する履歴の最大数（例: 10件まで）
         $history = array_slice($history, 0, 10);
-
         // クッキーに保存（30日間有効）
         setcookie('view_history', json_encode($history), time() + 30 * 86400, COOKIEPATH, COOKIE_DOMAIN);
     }
@@ -45,7 +42,6 @@ function save_view_history() {
 add_action('wp', 'save_view_history');
 
 //閲覧履歴を取得する関数
-
 function get_view_history_posts($limit = 10) {
     if (!isset($_COOKIE['view_history'])) {
         return [];
@@ -60,6 +56,34 @@ function get_view_history_posts($limit = 10) {
     return array_slice($history, 0, $limit);
 }
 
+//投稿ページのみ検索
+function my_post_search($search) {
+    if(is_search()) {
+    $search .= " AND post_type = 'post'";
+    }
+    return $search;
+    }
+
+    add_filter('posts_search', 'my_post_search');
+
+    add_action( 'init', function() {
+        error_log( 'この functions.php はちゃんと読み込まれてる' );
+    });
+
+//空欄検索でTOPページにリダイレクト
+function empty_search_redirect( $wp_query ) {
+if ( $wp_query->is_main_query() && $wp_query->is_search() && ! $wp_query->is_admin() ) {
+    // メインのクエリ且つ検索結果ページで、かつ管理画面でない場合の処理
+    $s = $wp_query->get( 's' );
+    //URL に ?s=検索ワード がある場合、その「検索ワード」がここで取得される
+    $s = trim( $s );
+    //trim()で前後の空白を削除
+    //空白の場合、トップページにリダイレクト
+    if ( empty( $s ) ) {
+    wp_safe_redirect( home_url('/') );
+    exit; }
+    } }
+    add_action( 'parse_query', 'empty_search_redirect' );
 
 //サイドバーのウィジェットエリアを作成 「メニューの位置」に新しく項目を登録
 add_action('after_setup_theme',function(){
@@ -92,10 +116,10 @@ function add_menu_link_class($atts, $item, $args,$depth) {
     if ($args->theme_location === 'sidebar-menu') {
         if($depth==0){
             $atts['class'] = 'l-sidebar__title--small c-menuItem__link';
-            }// ここで１階層目　a タグにクラスを追加
+            }// １階層目　aタグにクラスを追加
             elseif($depth==1){
                 $atts['class'] = 'c-menuItem__link';
-            } // ここで2階層目 a タグにクラスを追加
+            } // 2階層目 aタグにクラスを追加
 
         $args->theme_location == 'sidebar-menu'; // ここでメニューの位置を指定
         }
@@ -103,18 +127,34 @@ function add_menu_link_class($atts, $item, $args,$depth) {
 }
 add_filter('nav_menu_link_attributes', 'add_menu_link_class', 10, 4);
 
-//
+//aタグにクラスを追加
 function add_menu_footerLink_class($atts, $item, $args,$depth) {
     if ($args->theme_location === 'footer-menu') {
         if($depth==0){
             $atts['class'] = 'p-link__footer';
-            }// ここで１階層目　a タグにクラスを追加
+            }// １階層目　aタグにクラスを追加
         
         $args->theme_location == 'footer-menu'; // ここでメニューの位置を指定
     }
         return $atts;
     }
 add_filter('nav_menu_link_attributes', 'add_menu_footerLink_class', 10, 4);
+
+function add_span($content) {
+    if (is_page(974,'index')) {
+    // 正規表現で <h2> タグを探してその中身を <span> で囲む
+    $content = preg_replace_callback(
+        '/<h2(.*?)>(.*?)<\/h2>/is',
+        function($matches) {
+            // $matches[1] は h2 の属性、$matches[2] は中のテキスト
+            return '<h2' . $matches[1] . '><span>' . $matches[2] . '</span></h2>';
+        },
+        $content
+    );
+}
+return $content;
+}
+add_filter('the_content', 'add_span');
 
 // 投稿アーカイブページの表示設定 
 function post_has_archive($args, $post_type)
@@ -141,11 +181,10 @@ add_filter( 'get_the_archive_title', function ($title) {
         } elseif (is_date()) {
             $title = get_the_time('Y年n月');
         } elseif (is_search()) {
-            $title = '検索結果：'.esc_html( get_search_query(false) );
+            $title = ''.esc_html( get_search_query(false) );
         } elseif (is_404()) {
             $title = '「404」ページが見つかりません';
         } else {
-     
         }
         return $title;
     });
@@ -161,6 +200,41 @@ add_action('init', 'add_posttype_revisions');
 function custom_block_styles() {
     // 独自のブロックスタイルを登録する
     register_block_style(
+        'core/column', // ブロック名
+        array(
+            'name'         => 'card-left', // スタイル名
+            'label'        => '左のカード', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/column', // ブロック名
+        array(
+            'name'         => 'card-right', // スタイル名
+            'label'        => '右のカード', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/cover', // ブロック名
+        array(
+            'name'         => 'hero', // スタイル名
+            'label'        => '上部メインビジュアル', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/cover', // ブロック名
+        array(
+            'name'         => 'map', // スタイル名
+            'label'        => 'map画像レイアウト', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/cover', // ブロック名
+        array(
+            'name'         => 'map-ray', // スタイル名
+            'label'        => 'mapの上の濃いオーバーレイ', // スタイルの表示名
+        )
+    );
+    register_block_style(
         'core/media-text', // ブロック名
         array(
             'name'         => 'text-right', // スタイル名
@@ -172,6 +246,13 @@ function custom_block_styles() {
         array(
             'name'         => 'text-left', // スタイル名
             'label'        => 'テキストが左', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/image', // ブロック名
+        array(
+            'name'         => 'img-upper', // スタイル名
+            'label'        => '最上部の画像レイアウト', // スタイルの表示名
         )
     );
     register_block_style(
@@ -200,6 +281,20 @@ function custom_block_styles() {
         array(
             'name'         => 'link', // スタイル名
             'label'        => 'リンク下線色なし', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/group', // ブロック名
+        array(
+            'name'         => 'map-textarea', // スタイル名
+            'label'        => 'map上のテキストエリア', // スタイルの表示名
+        )
+    );
+    register_block_style(
+        'core/heading', // ブロック名
+        array(
+            'name'         => 'map-heading', // スタイル名
+            'label'        => 'map上の見出し', // スタイルの表示名
         )
     );
     register_block_style(

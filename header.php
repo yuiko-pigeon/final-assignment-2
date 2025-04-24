@@ -13,7 +13,7 @@
             <header class="l-header">
                 <button type="button" class="l-header__title__small" id="js-hamburger">Menu</button>
                 <div class="l-header__article">
-                    <h1 class="l-header__title"><?php bloginfo( 'name' ); ?></h1>
-<?php get_search_form(); ?>
+                    <h1 class="l-header__title"><a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+        <?php get_search_form(); ?>
                 </div>
             </header>

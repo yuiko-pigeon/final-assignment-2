@@ -1,11 +1,11 @@
 <footer class="l-footer">
                 <div class="l-footer__inner">
-                    <div class="p-footer__color">
-                        <div class="p-footer__image">   
+                    <div class="p-footerForPhp__color">
+                        <div class="p-footerForPhp__image">   
                             <article class="l-footer__textarea"> 
                                 <?php wp_nav_menu( array(
                                     'menu' => '',
-                                    'menu_class' => 'p-footer__text l-footer__text', //最上位の <ul>のクラス名
+                                    'menu_class' => 'p-footerForPhp__text l-footer__text', //最上位の <ul>のクラス名
                                     'fallback_cb' => 'wp_page_menu',
                                     'echo' => true,
                                     'depth' => 2,
@@ -13,7 +13,7 @@
                                     'theme_location' => 'footer-menu',
                                     'item_spacing' => 'false'
                                 ) ); ?>
-                                <section class="p-footer__text--small l-footer__text--small">
+                                <section class="p-footerForPhp__text--small l-footer__text--small">
                                     <a>CopyRight: RaiseTech</a>
                                 </section>
                                 
