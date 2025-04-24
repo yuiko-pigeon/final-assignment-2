@@ -3,10 +3,10 @@
             <main class="l-main l-main__font">
                 <div class="p-hero__imageArea">
                     <div class="p-hero__blackScreen">
-                        <p class="p-hero__title--area">
+                        <div class="p-hero__title--area">
                             <h1 class="p-hero__title--menu">Menu:</h1>
                             <span class="p-hero__title--menucontent"><?php the_archive_title(); ?></span>
-                        </p>
+                        </div>
                     </div>
                     <img src="<?php echo get_theme_file_uri( 'image/three-burgers-on-brown-wooden-tray-between-white-ceramic-sp.jpg' ); ?>" class="c-image__threeBurgers--sp" alt="3つのハンバーガー">
                     <img src="<?php echo get_theme_file_uri( 'image/three-burgers-on-brown-wooden-tray-between-white-ceramic-tb.jpg' ); ?>" class="c-image__threeBurgers--tb" alt="3つのハンバーガー">
