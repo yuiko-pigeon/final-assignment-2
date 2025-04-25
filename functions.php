@@ -113,7 +113,13 @@ class custom_walker_nav_footermenu extends Walker_Nav_Menu {
 
 //サイドバーのaタグにクラスを追加
 function add_menu_link_class($atts, $item, $args,$depth) {
-    if ($args->theme_location === 'sidebar-menu') {
+    //if ($args->theme_location === 'sidebar-menu') { ←間違い。オブジェクトであることを確認する↓
+    /* デバッグして型を確認する
+    error_log('--------');
+    error_log('型: ' . gettype($args));
+    error_log(print_r($args, true));
+    error_log('--------');*/
+    if (is_object($args) && isset($args->theme_location) && $args->theme_location === 'sidebar-menu') {
         if($depth==0){
             $atts['class'] = 'l-sidebar__title--small c-menuItem__link';
             }// １階層目　aタグにクラスを追加

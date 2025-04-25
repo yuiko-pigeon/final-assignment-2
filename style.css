@@ -4365,4 +4365,8 @@ input, select {
     gap: 3.75rem;
   }
 }
+
+.u-text__small {
+  font-size: 1.2rem;
+}
 /*# sourceMappingURL=style.css.map */
