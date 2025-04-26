@@ -16,6 +16,13 @@
                               'theme_location' => 'sidebar-menu',
                               'item_spacing' => 'false'
                          ) ); ?>
+                         <?php if (has_nav_menu('sidebar-menu')) : ?>
+                                <?php wp_nav_menu([
+                                    'theme_location' => 'sidebar-menu',
+                                ] ); ?>
+                                <?php else : ?>
+                                <p class="l-sidebar__menu__list">メニューはまだ設定されていません。</p>
+                                <?php endif; ?>
                         
                     </div>
                 </nav>

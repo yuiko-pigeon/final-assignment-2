@@ -13,6 +13,13 @@
                                     'theme_location' => 'footer-menu',
                                     'item_spacing' => 'false'
                                 ) ); ?>
+                                <?php if (has_nav_menu('footer-menu')) : ?>
+                                <?php wp_nav_menu([
+                                    'theme_location' => 'footer-menu',
+                                ] ); ?>
+                                <?php else : ?>
+                                <p class="p-footer__text l-footer__text">メニューはまだ設定されていません。</p>
+                                <?php endif; ?>
                                 <section class="p-footerForPhp__text--small l-footer__text--small">
                                     <a>CopyRight: RaiseTech</a>
                                 </section>
