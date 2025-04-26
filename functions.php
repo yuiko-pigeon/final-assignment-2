@@ -126,8 +126,6 @@ function add_menu_link_class($atts, $item, $args,$depth) {
             elseif($depth==1){
                 $atts['class'] = 'c-menuItem__link';
             } // 2階層目 aタグにクラスを追加
-
-        $args->theme_location == 'sidebar-menu'; // ここでメニューの位置を指定
         }
     return $atts;
 }
@@ -135,15 +133,13 @@ add_filter('nav_menu_link_attributes', 'add_menu_link_class', 10, 4);
 
 //aタグにクラスを追加
 function add_menu_footerLink_class($atts, $item, $args,$depth) {
-    if ($args->theme_location === 'footer-menu') {
+    if (is_object($args) && isset($args->theme_location) && $args->theme_location === 'footer-menu') {
         if($depth==0){
             $atts['class'] = 'p-link__footer';
             }// １階層目　aタグにクラスを追加
-        
-        $args->theme_location == 'footer-menu'; // ここでメニューの位置を指定
     }
         return $atts;
-    }
+}
 add_filter('nav_menu_link_attributes', 'add_menu_footerLink_class', 10, 4);
 
 function add_span($content) {
