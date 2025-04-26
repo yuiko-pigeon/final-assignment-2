@@ -3,6 +3,7 @@
                     <div class="p-footerForPhp__color">
                         <div class="p-footerForPhp__image">   
                             <article class="l-footer__textarea"> 
+                            <?php if (has_nav_menu('footer-menu')) : ?>
                                 <?php wp_nav_menu( array(
                                     'menu' => '',
                                     'menu_class' => 'p-footerForPhp__text l-footer__text', //最上位の <ul>のクラス名
@@ -13,12 +14,8 @@
                                     'theme_location' => 'footer-menu',
                                     'item_spacing' => 'false'
                                 ) ); ?>
-                                <?php if (has_nav_menu('footer-menu')) : ?>
-                                <?php wp_nav_menu([
-                                    'theme_location' => 'footer-menu',
-                                ] ); ?>
                                 <?php else : ?>
-                                <p class="p-footer__text l-footer__text">メニューはまだ設定されていません。</p>
+                                    <p class="p-footer__text l-footer__text">メニューはまだ設定されていません。</p>
                                 <?php endif; ?>
                                 <section class="p-footerForPhp__text--small l-footer__text--small">
                                     <a>CopyRight: RaiseTech</a>
