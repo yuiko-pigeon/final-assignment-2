@@ -23,7 +23,6 @@
                 <?php
                         // スラッグで "archive-headertext" の固定ページを取得
                         $header_page = get_page_by_path('search-headertext');
-
                         if ($header_page) {
                         echo '<section class="p-article__area">';
                         // タイトルを表示（h2など任意のタグ）
@@ -79,8 +78,8 @@
         </section>
         <?php endwhile; ?>
     <?php else: ?>
-        <div class="post">
-            <p>申し訳ございません。<br>該当する記事がございません。</p>
+        <div class="p-card__textarea">
+            <p>該当する記事がありません。</p>
         </div>
     <?php endif; ?>
             <!-- 検索結果の件数を表示 

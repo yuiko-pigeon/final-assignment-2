@@ -17,7 +17,6 @@
                 <?php
                         // スラッグで "archive-headertext" の固定ページを取得
                         $header_page = get_page_by_path('archive-headertext');
-
                         if ($header_page) {
                         echo '<section class="p-article__area">';
                         // タイトルを表示（h2など任意のタグ）
