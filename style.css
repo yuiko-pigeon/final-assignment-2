@@ -1,4 +1,17 @@
 @charset "UTF-8";
+/*
+ Theme Name:   Hamburger
+ Theme URI:   
+ Author:       Yuiko（Original: Richard Clark）
+ Author URI: 
+ Description:  Hamburgerサイト
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  HAMBURGER
+ Tested up to: 6.7
+ Requires PHP: 8.4
+*/
 /*light*/
 /*Medium*/
 /*Bold*/
@@ -2384,7 +2397,6 @@ input, select {
   background: linear-gradient(#F2EDE9, #DED8D3);
 }
 .single .wp-block-button__link {
-  display: flex;
   color: #3C2A10;
   font-weight: 700;
   font-size: 1rem;
@@ -2618,7 +2630,7 @@ input, select {
   display: grid;
   position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  min-height: 100dvh;
   grid-template-columns: 1fr;
   grid-template-rows: 13.4375rem 1fr 9.375rem;
 }
@@ -2631,7 +2643,7 @@ input, select {
   .page .l-wrapper {
     display: grid;
     grid-template-columns: 80% 20%;
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 .page .l-wrapper.fix {
@@ -2800,7 +2812,6 @@ input, select {
   background: linear-gradient(#F2EDE9, #DED8D3);
 }
 .page .wp-block-button__link {
-  display: flex;
   color: #3C2A10;
   font-weight: 700;
   font-size: 1rem;
@@ -3974,6 +3985,7 @@ input, select {
 .page-id-974 .wp-block-columns .is-style-card-left .is-light > .wp-block-cover__inner-container {
   padding-left: 0;
   justify-content: center;
+  position: unset;
 }
 .page-id-974 .wp-block-columns .is-style-card-left h2 {
   display: inline-block;
@@ -4090,6 +4102,7 @@ input, select {
 .page-id-974 .wp-block-columns .is-style-card-right .wp-block-cover > .wp-block-cover__inner-container {
   padding-left: 0;
   justify-content: center;
+  position: unset;
 }
 .page-id-974 .wp-block-columns .is-style-card-right h2 {
   color: #FFFFFF;
@@ -4279,6 +4292,9 @@ input, select {
     height: 100%;
   }
 }
+.page-id-974 .is-style-map-ray > div {
+  z-index: 1;
+}
 .page-id-974 .is-style-map-textarea {
   padding: 11.2% 10.7% 15.2%;
 }
@@ -4296,7 +4312,7 @@ input, select {
   display: block;
   color: #FFFFFF;
   font-size: 0.875rem;
-  line-height: 2.0625rem;
+  line-height: 2.0625rem !important;
   margin-top: 0.9375rem;
 }
 @media screen and (min-width: 1200px) {

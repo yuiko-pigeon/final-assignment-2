@@ -1,12 +1,12 @@
 <?php
 //テーマサポート
-add_theme_support( 'menus' );
 add_theme_support( 'title-tag' );
 add_theme_support('post-thumbnails');
+add_theme_support('automatic-feed-links');
 
 //タイトル出力
 function hamburger_title( $title ) {
-    if ( is_front_page() && is_home() ) { //トップページなら
+    if ( is_front_page() ) { //トップページなら
         $title = get_bloginfo( 'name', 'display' );
     } elseif ( is_singular() ) { //シングルページなら
         $title = single_post_title( '', false );
@@ -18,7 +18,7 @@ add_filter( 'pre_get_document_title', 'hamburger_title' );
 //CSSファイルの読み込み ress.cssの後にstyle.cssを読み込む
 function my_enqueue_style(){
     wp_enqueue_style('style',get_theme_file_uri('style.css'),array(),false,'all');
-    wp_enqueue_script('jquery','https://code.jquery.com/jquery-3.7.1.js','','3.7.1',false);
+    wp_enqueue_script('jquery',get_theme_file_uri('/js/jquery-3.7.1.slim.min.js'),'','3.7.1',false);
     wp_enqueue_script('main',get_theme_file_uri('/js/main.js'),'jquery','',true);
 }
 add_action('wp_enqueue_scripts','my_enqueue_style');
@@ -350,6 +350,7 @@ function custom_block_styles() {
     );
 }
 add_action( 'init', 'custom_block_styles' );
+
 
 
 //特定の位置のタグにクラスを追加
