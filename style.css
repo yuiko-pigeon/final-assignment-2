@@ -2,11 +2,11 @@
 /*
  Theme Name:   Hamburger
  Theme URI:   
- Author:       Yuiko（Original: Richard Clark）
+ Author:       Yuiko（Original: YAT）
  Author URI: 
  Description:  Hamburgerサイト
  Version:      1.0.0
- License:      GNU General Public License v2 or later
+ License:      GPLv2 or later
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  HAMBURGER
  Tested up to: 6.7
@@ -2817,11 +2817,11 @@ input, select {
   font-size: 1rem;
   font-family: "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   background-color: transparent;
-  border-radius: none;
+  border-radius: 0;
   border: none;
   box-shadow: none;
   text-decoration: none;
-  padding: auto;
+  padding: 0;
 }
 .page .is-style-text-right {
   grid-template-columns: 42.7% auto !important;
@@ -3682,7 +3682,7 @@ input, select {
   display: none;
 }
 
-.p-searchformForPhp {
+.p-searchform-for-php {
   display: flex;
   margin: 1.75rem 0 2.81rem 0;
   justify-content: center;
@@ -3693,19 +3693,19 @@ input, select {
   /*むしろ、width:100%;で親要素と同じサイズのinput用意*/
 }
 @media screen and (min-width: 781px) {
-  .p-searchformForPhp {
+  .p-searchform-for-php {
     width: 65.5%;
   }
 }
 @media screen and (min-width: 1200px) {
-  .p-searchformForPhp {
+  .p-searchform-for-php {
     margin: 0;
     position: absolute;
     right: 1.987rem;
     width: 35%;
   }
 }
-.p-searchformForPhp__box {
+.p-searchform-for-php__box {
   display: flex;
   position: relative;
   border-radius: 0.625rem 0.5rem 0.625rem 0.625rem;
@@ -3713,17 +3713,17 @@ input, select {
   height: 2.875rem;
 }
 @media screen and (min-width: 781px) {
-  .p-searchformForPhp__box {
+  .p-searchform-for-php__box {
     width: 72.5%;
     border-radius: 0.625rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .p-searchformForPhp__box {
+  .p-searchform-for-php__box {
     width: 73%;
   }
 }
-.p-searchformForPhp__box::before {
+.p-searchform-for-php__box::before {
   content: "";
   width: 1.5rem;
   height: 1.5rem;
@@ -3733,7 +3733,7 @@ input, select {
   top: 0.6875rem;
   left: 0.875rem;
 }
-.p-searchformForPhp__input {
+.p-searchform-for-php__input {
   border-radius: 0.625rem 0.5rem 0.625rem 0.625rem;
   width: 100%;
   padding-left: 3rem;
@@ -3745,18 +3745,18 @@ input, select {
   font-size: 1rem;
 }
 @media screen and (min-width: 781px) {
-  .p-searchformForPhp__input {
+  .p-searchform-for-php__input {
     border-radius: 0.625rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .p-searchformForPhp__input {
+  .p-searchform-for-php__input {
     line-height: 2.0625rem;
     font-family: "Mplus 1m", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
     color: #707070;
   }
 }
-.p-searchformForPhp__button {
+.p-searchform-for-php__button {
   display: flex;
   justify-content: center;
   border-radius: 0.625rem;
@@ -3765,52 +3765,52 @@ input, select {
   cursor: pointer;
 }
 @media screen and (min-width: 781px) {
-  .p-searchformForPhp__button {
+  .p-searchform-for-php__button {
     width: 24.9%;
   }
 }
-.p-searchformForPhp__text {
+.p-searchform-for-php__text {
   position: absolute;
   left: 3rem;
   top: 0.7rem;
 }
 @media screen and (min-width: 1200px) {
-  .p-searchformForPhp__text {
+  .p-searchform-for-php__text {
     left: 3rem;
     top: 0.4rem;
   }
 }
 
-.p-footerForPhp__text {
+.p-footer-for-php__text {
   display: block;
   font-family: "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   font-weight: 400;
   color: #FFFFFF;
 }
 @media screen and (min-width: 375px) {
-  .p-footerForPhp__text {
+  .p-footer-for-php__text {
     font-size: 1.125rem;
   }
 }
 @media screen and (min-width: 781px) {
-  .p-footerForPhp__text {
+  .p-footer-for-php__text {
     font-size: 1.25rem;
   }
 }
-.p-footerForPhp__text--small {
+.p-footer-for-php__text--small {
   display: block;
   font-family: "M PLUS 1p", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   font-weight: 400;
   color: #FFFFFF;
   font-size: 0.875rem;
 }
-.p-footerForPhp__color {
+.p-footer-for-php__color {
   display: block;
   background-color: #9D8670;
   background-size: cover;
   height: 150px;
 }
-.p-footerForPhp__image {
+.p-footer-for-php__image {
   display: block;
   background-image: url(./image/texture-layer.png);
   background-repeat: repeat-x;
@@ -3825,6 +3825,8 @@ input, select {
 }
 .menu-footer-container ul {
   display: flex;
+  height: 1.875rem;
+  align-items: center;
 }
 .menu-footer-container ul > li {
   list-style: none;
@@ -4349,19 +4351,6 @@ input, select {
   width: 4.6875rem;
 }
 
-/*.p-map{
-    p{
-        display: block;
-        color: g.$color-white;
-        font-size: 0.875rem;    //14px
-        line-height: 2.0625rem; //33px
-        margin-top: 0.9375rem;
-            @include g.pc{
-                font-size: 1rem;    //16px
-                line-height: 2.0625rem; //33px
-            }
-    }
-}*/
 .u-margin__center {
   margin: 0 auto;
 }

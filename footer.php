@@ -1,12 +1,12 @@
 <footer class="l-footer">
                 <div class="l-footer__inner">
-                    <div class="p-footerForPhp__color">
-                        <div class="p-footerForPhp__image">   
+                    <div class="p-footer-for-php__color">
+                        <div class="p-footer-for-php__image">   
                             <article class="l-footer__textarea"> 
                             <?php if (has_nav_menu('footer-menu')) : ?>
                                 <?php wp_nav_menu( array(
                                     'menu' => '',
-                                    'menu_class' => 'p-footerForPhp__text l-footer__text', //最上位の <ul>のクラス名
+                                    'menu_class' => 'p-footer-for-php__text l-footer__text', //最上位の <ul>のクラス名
                                     'fallback_cb' => 'wp_page_menu',
                                     'echo' => true,
                                     'depth' => 2,
@@ -17,7 +17,7 @@
                                 <?php else : ?>
                                     <p class="p-footer__text l-footer__text">メニューはまだ設定されていません。</p>
                                 <?php endif; ?>
-                                <section class="p-footerForPhp__text--small l-footer__text--small">
+                                <section class="p-footer-for-php__text--small l-footer__text--small">
                                     <a>CopyRight: RaiseTech</a>
                                 </section>
                                 
