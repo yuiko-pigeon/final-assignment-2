@@ -352,7 +352,6 @@ function custom_block_styles() {
 add_action( 'init', 'custom_block_styles' );
 
 
-
 //特定の位置のタグにクラスを追加
 /*function add_paragraph_class($content) {
     if (is_single()) {
