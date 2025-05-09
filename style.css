@@ -3719,6 +3719,8 @@ input, select {
   width: 28.3%;
   border: solid 0.0625rem #707070;
   cursor: pointer;
+  color: #707070;
+  background: linear-gradient(#F2EDE9, #DED8D3);
 }
 @media screen and (min-width: 781px) {
   .p-searchform-for-php__button {
