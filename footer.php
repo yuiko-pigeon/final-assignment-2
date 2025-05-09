@@ -28,7 +28,7 @@
             </footer>
         </div>
         <?php wp_footer(); ?>
-        <?php if( is_user_logged_in() ) : ?>
+        <!--<//?php if( is_user_logged_in() ) : ?>
             <style type="text/css">
                 html {
                     margin: 0 0 2rem!important;
@@ -39,6 +39,6 @@
                     position: fixed !important; 
                 }
             </style>
-        <?php endif; ?>
+        <//?php endif; ?>-->
     </body>
 </html>

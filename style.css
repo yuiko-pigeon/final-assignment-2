@@ -134,7 +134,7 @@ input, select {
 }
 .l-footer__inner {
   display: block;
-  height: 9.375rem;
+  height: 100%;
 }
 .l-footer__textarea {
   display: flex;
@@ -147,34 +147,34 @@ input, select {
 }
 .l-footer__text {
   position: absolute;
-  top: 1rem;
+  top: 10.67%;
 }
 @media screen and (min-width: 781px) {
   .l-footer__text {
     position: absolute;
-    top: 1.875rem;
+    top: 20%;
   }
 }
 @media screen and (min-width: 1200px) {
   .l-footer__text {
     position: absolute;
-    top: 2.5625rem;
+    top: 27.33%;
   }
 }
 .l-footer__text--small {
   position: absolute;
-  bottom: 1rem;
+  bottom: 10.67%;
 }
 @media screen and (min-width: 781px) {
   .l-footer__text--small {
     position: absolute;
-    bottom: 1.5625rem;
+    bottom: 16.67%;
   }
 }
 @media screen and (min-width: 1200px) {
   .l-footer__text--small {
     position: absolute;
-    bottom: 1.6875rem;
+    bottom: 18%;
   }
 }
 
@@ -1833,14 +1833,14 @@ input, select {
   display: block;
   background-color: #9D8670;
   background-size: cover;
-  height: 150px;
+  height: 100%;
 }
 .p-footer__image {
   display: block;
   background-image: url(../../picture/texture-layer.png);
   background-repeat: repeat-x;
   background-size: cover;
-  height: 150px;
+  height: 100%;
 }
 
 /*
@@ -3764,14 +3764,14 @@ input, select {
   display: block;
   background-color: #9D8670;
   background-size: cover;
-  height: 150px;
+  height: 100%;
 }
 .p-footer-for-php__image {
   display: block;
   background-image: url(./image/texture-layer.png);
   background-repeat: repeat-x;
   background-size: cover;
-  height: 150px;
+  height: 100%;
 }
 
 .menu-footer-container {
@@ -3851,18 +3851,18 @@ input, select {
   display: flex;
   align-items: center;
   padding-left: 6.7%;
-  font-size: 9.6vw;
+  font-size: clamp(2.06rem, 9.6vw, 4.5rem);
   color: #FFFFFF;
 }
 @media screen and (min-width: 781px) {
   .page-id-974 .is-style-hero .wp-block-cover__inner-container {
-    font-size: 4.32vw;
+    font-size: clamp(2.18rem, 4.32vw, 3rem);
     padding-left: 10.3%;
   }
 }
 @media screen and (min-width: 1200px) {
   .page-id-974 .is-style-hero .wp-block-cover__inner-container {
-    font-size: 2.08vw;
+    font-size: clamp(1.62rem, 2.08vw, 3.12rem);
     padding-left: 5.5%;
   }
 }
@@ -3938,27 +3938,29 @@ input, select {
 }
 .page-id-974 .wp-block-columns .is-style-card-left h2 {
   display: inline-block;
-  font: 700 10.9vw "Roboto", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.31rem, 10.9vw, 5.25rem);
+  font-family: "Roboto", Noto Sans JP, MyYuGothicM, YuGothic, -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", Meiryo, Verdana, arial, helvetica, sans-serif;
   color: #EAEAEA;
   position: absolute;
   top: 0.8125rem;
   left: 4.48%;
-  line-height: 12.8vw;
+  line-height: clamp(2.72rem, 12.8vw, 6.18rem);
 }
 @media screen and (min-width: 781px) {
   .page-id-974 .wp-block-columns .is-style-card-left h2 {
     top: 0.875rem;
     left: 3.09%;
-    font-size: 5.28vw;
-    line-height: 6.18vw;
+    font-size: clamp(2.56rem, 5.28vw, 3.88rem);
+    line-height: clamp(3rem, 6.18vw, 4.63rem);
   }
 }
 @media screen and (min-width: 1200px) {
   .page-id-974 .wp-block-columns .is-style-card-left h2 {
     top: 1.5rem;
     left: 1.63%;
-    font-size: 4.2vw;
-    line-height: 4.9vw;
+    font-size: clamp(3.18rem, 4.2vw, 6.18rem);
+    line-height: clamp(3.68rem, 4.9vw, 7.18rem);
   }
 }
 .page-id-974 .wp-block-columns .is-style-card-left h2 > span {
@@ -4060,25 +4062,25 @@ input, select {
 .page-id-974 .wp-block-columns .is-style-card-right h2 {
   color: #FFFFFF;
   display: flex;
-  font-size: 10.9vw;
+  font-size: clamp(2.31rem, 10.9vw, 5.25rem);
   position: absolute;
   top: 0.8125rem;
   left: 3.87%;
-  line-height: 12.8vw;
+  line-height: clamp(2.72rem, 12.8vw, 6.18rem);
 }
 @media screen and (min-width: 781px) {
   .page-id-974 .wp-block-columns .is-style-card-right h2 {
     top: 1rem;
-    font-size: 5.28vw;
-    line-height: 6.18vw;
+    font-size: clamp(2.56rem, 5.28vw, 3.88rem);
+    line-height: clamp(3rem, 6.18vw, 4.63rem);
   }
 }
 @media screen and (min-width: 1200px) {
   .page-id-974 .wp-block-columns .is-style-card-right h2 {
     top: 1.75rem;
     left: 3.41%;
-    font-size: 4.2vw;
-    line-height: 4.9vw;
+    font-size: clamp(3.18rem, 4.2vw, 6.18rem);
+    line-height: clamp(3.68rem, 4.9vw, 7.18rem);
   }
 }
 .page-id-974 .wp-block-columns .is-style-card-right h2 > span {
